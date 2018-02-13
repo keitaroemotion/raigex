@@ -2,6 +2,7 @@
 
 def find(option)
   regex_string = (option || "").strip
+  regex_string = regex_string.gsub(":", "\\:")
   
   if regex_string.start_with?("/")
     regex_string = regex_string[1..-1]
