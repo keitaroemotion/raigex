@@ -1,6 +1,6 @@
-# railoute
+# raigex
 
-With railoute, you can use regex for finding the rails route path.
+With raigex, you can use regex for finding the rails route path.
 
 
 ## installation
@@ -12,7 +12,7 @@ $ ./installation
 ## usage
 
 ```
-$ railoute
+$ raigex
 ```
 
 ## developer info
