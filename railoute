@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+regex_string = ARGV[0].strip
+
+if regex_string.start_with?("/")
+  regex_string = regex_string[1..-1]
+end
+
+if regex_string.end_with?("/")
+  regex_string = regex_string[0...-1]
+end
+
+regex = Regexp.new(regex_string)
+
+puts "\n\n#{regex}\n\n"
+
+routes = `bin/rake routes`.split("\n")
+
+matches = routes.select do |route|
+  regex.match(route)
+end  
+
+puts matches
